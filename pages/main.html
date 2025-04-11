@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1>Message Board</h1>
+        <div class="user-info">
+            <span id="username">Username</span>
+            <a href="login.html" class="auth-button">
+                <i class="fas fa-sign-out-alt"></i>
+                Logout
+            </a>
+        </div>
+    </header>
+
+    <div class="post-container">
+        <div class="post-form">
+            <input type="text" class="post-input" placeholder="Topic" id="postTopic">
+            <textarea class="post-input" placeholder="What's on your mind?" id="postContent" rows="6"></textarea>
+            <button onclick="handlePost()" class="post-button">Post Message</button>
+        </div>
+        <div id="posts">
+            <!-- Posts will be added here -->
+        </div>
+    </div>
+    <script src="../src/scripts/main.js"></script>
+</body>
+</html>
+
+
+

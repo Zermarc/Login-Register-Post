@@ -1,0 +1,152 @@
+@import 'base.css';
+
+/* นำ styles จาก login.css มาใช้ร่วม */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.auth-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 450px;
+}
+
+.auth-box h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem 35px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+/* Styles เฉพาะของหน้า Register */
+.password-requirements {
+    background: linear-gradient(135deg, #fffbeb, #fef3c7);
+    border-left: 4px solid #fbbf24;
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 4px rgba(251, 191, 36, 0.1);
+}
+
+.password-requirements ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.password-requirements li {
+    margin-bottom: 0.75rem;
+    color: #92400e;
+    position: relative;
+    padding-left: 28px;
+    font-size: 0.95rem;
+}
+
+.password-requirements li:before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #059669;
+    opacity: 0.5;
+}
+
+.password-requirements li.valid:before {
+    opacity: 1;
+}
+
+.validation-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #00cc7a;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.validation-icon.show {
+    opacity: 1;
+}
+
+.password-field {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.error-message {
+    color: #ff4444;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+
+.auth-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #00ff99;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+    background-color: #00cc7a;
+}
+
+.auth-link {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.auth-link a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+}
+

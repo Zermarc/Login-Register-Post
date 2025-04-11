@@ -1,0 +1,108 @@
+@import 'base.css';
+
+.main-header {
+    background-color: white;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.main-header h1 {
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#username {
+    font-weight: 500;
+    color: #555;
+}
+
+.auth-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 0.75rem 1.25rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.auth-button:hover {
+    background-color: #ebebeb;
+}
+
+.post-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.post-form {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+}
+
+.post-input {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.post-input:focus {
+    outline: none;
+    border-color: #00ff99;
+}
+
+.post-button {
+    background-color: #00ff99;
+    color: black;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.post-button:hover {
+    background-color: #00cc7a;
+}
+
+#posts > div {
+    background: white;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+#posts h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+#posts p {
+    color: #555;
+    line-height: 1.6;
+}
+
