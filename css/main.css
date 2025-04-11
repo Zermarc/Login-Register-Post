@@ -12,7 +12,7 @@
 
 .main-header h1 {
     font-size: 1.8rem;
-    color: #333;
+    color: #31a879;
     font-weight: 600;
 }
 
@@ -57,14 +57,30 @@
     margin-bottom: 2rem;
 }
 
+.input-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.char-counter {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    color: #888;
+    pointer-events: none;
+    user-select: none;
+}
+
 .post-input {
     width: 100%;
-    margin-bottom: 1rem;
     padding: 1rem;
     border: 1px solid #eee;
     border-radius: 8px;
     font-size: 1rem;
     transition: border-color 0.3s ease;
+    padding-right: 45px !important; /* ให้ */
 }
 
 .post-input:focus {
@@ -105,4 +121,7 @@
     color: #555;
     line-height: 1.6;
 }
+
+
+
 

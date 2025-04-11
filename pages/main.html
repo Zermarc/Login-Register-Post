@@ -21,8 +21,18 @@
 
     <div class="post-container">
         <div class="post-form">
-            <input type="text" class="post-input" placeholder="Topic" id="postTopic">
-            <textarea class="post-input" placeholder="What's on your mind?" id="postContent" rows="6"></textarea>
+            <div class="input-group">
+                <input type="text" 
+                       class="post-input" 
+                       placeholder="Topic" 
+                       id="postTopic" 
+                       maxlength="35">
+                <span class="char-counter">0/35</span>
+            </div>
+            <textarea class="post-input" 
+                      placeholder="What's on your mind?" 
+                      id="postContent" 
+                      rows="6"></textarea>
             <button onclick="handlePost()" class="post-button">Post Message</button>
         </div>
         <div id="posts">
@@ -32,6 +42,9 @@
     <script src="../src/scripts/main.js"></script>
 </body>
 </html>
+
+
+
 
 
 
