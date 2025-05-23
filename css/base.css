@@ -8,6 +8,18 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
+    min-height: 100vh; /* ทำให้ body อย่างน้อยเท่าความของ viewport */
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.main-content-container {
+    flex: 1; /* ทำให้ content ขยายเต็มส่วน */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 100%;
 }
 
 /* Common button styles */
@@ -48,3 +60,54 @@ body {
     opacity: 1;
     color: #00cc7a;
 }
+
+/* Button active state effects */
+.auth-button:active,
+.post-button:active,
+.add-to-cart:active,
+.buy-now:active,
+form button:active {
+    transform: scale(0.95);
+}
+
+/* Add transition for smooth effect */
+.auth-button,
+.post-button,
+.add-to-cart,
+.buy-now,
+form button {
+    transition: transform 0.1s ease;
+}
+
+/* Optional: Add box-shadow on active state for more depth */
+.auth-button:active,
+.post-button:active,
+.add-to-cart:active,
+.buy-now:active,
+form button:active {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    background-color: white;
+    padding: 1.5rem;
+    text-align: center;
+    color: #666;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    margin-top: auto; /* ทำให้ footer ลงไปด้านล่าง */
+    width: 100%;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    line-height: 1;
+    margin: 0; /* ลบ margin ของ paragraph */
+}
+
+.footer .author {
+    color: #31a879;
+    font-weight: 500;
+}
+
+
+

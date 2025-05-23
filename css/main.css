@@ -14,6 +14,8 @@
     font-size: 1.8rem;
     color: #31a879;
     font-weight: 600;
+    margin-right: auto; /* ทำให้ h1 ชิดซ้าย */
+    margin-left: 1rem;  /* ระยะห่างจาก menu */
 }
 
 .user-info {
@@ -43,7 +45,7 @@
     background-color: #ebebeb;
 }
 
-.post-container {
+.main-content-container {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 1rem;
@@ -80,7 +82,7 @@
     border-radius: 8px;
     font-size: 1rem;
     transition: border-color 0.3s ease;
-    padding-right: 45px !important; /* ให้ */
+    padding-right: 45px !important;
 }
 
 .post-input:focus {
@@ -122,6 +124,8 @@
     line-height: 1.6;
 }
 
-
-
-
+/* เล่มส่วนต่อจาก styles อยู่ */
+.menu-container {
+    display: flex;
+    align-items: center;
+}

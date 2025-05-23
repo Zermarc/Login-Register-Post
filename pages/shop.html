@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+    <link rel="stylesheet" href="../css/shop.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="menu-container">
+        <i class="fas fa-bars menu-icon"></i>
+        <div class="dropdown-menu">
+          <a href="message_board.html">Message Board</a>
+          <a href="shop.html">Shop</a>
+          <a href="resume.html">Profile</a>
+        </div>
+      </div>
+      <h1>Shop</h1>
+      <div class="user-info">
+        <div class="cart-info">
+          <a href="#" class="cart-button">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-amount">฿9999 THB</span>
+          </a>
+        </div>
+        <span id="username" onclick="window.location.href='resume.html'"
+          >Username</span
+        >
+        <a href="login.html" class="auth-button">
+          <i class="fas fa-sign-out-alt"></i>
+          Logout
+        </a>
+      </div>
+    </header>
+
+    <div class="main-content-container">
+      <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <img
+            src="../images/the_bike_guy_book.jpg"
+            alt="The bike guy book"
+            width="350"
+            height="350"
+          />
+          <div class="product-info">
+            <h3>The bike guy Book</h3>
+            <p class="product-description">
+              High-precision gaming mouse with RGB lighting and programmable
+              buttons.
+            </p>
+            <p class="product-price">฿390</p>
+            <div class="button-group">
+              <button class="add-to-cart">Add to Cart</button>
+              <button class="buy-now">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+          <img
+            src="../images/fitness_for_all_book.jpg"
+            alt="Fitness for all Book"
+            width="350"
+            height="350"
+          />
+          <div class="product-info">
+            <h3>Fitness for all Book</h3>
+            <p class="product-description">
+              Premium mechanical keyboard with Cherry MX switches and
+              customizable backlighting.
+            </p>
+            <p class="product-price">฿1890</p>
+            <div class="button-group">
+              <button class="add-to-cart">Add to Cart</button>
+              <button class="buy-now">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+          <img
+            src="../images/atomic_love_book.jpg"
+            alt="Atomic love Book"
+            width="350"
+            height="350"
+          />
+          <div class="product-info">
+            <h3>Atomic love Book</h3>
+            <p class="product-description">
+              7.1 surround sound gaming headset with noise-canceling microphone.
+            </p>
+            <p class="product-price">฿990</p>
+            <div class="button-group">
+              <button class="add-to-cart">Add to Cart</button>
+              <button class="buy-now">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+          <img
+            src="../images/iphone15.png"
+            alt="iPhone 15"
+            width="350"
+            height="350"
+          />
+          <div class="product-info">
+            <h3>iPhone 15</h3>
+            <p class="product-description">
+              24-inch 144Hz gaming monitor with 1ms response time and HDR
+              support.
+            </p>
+            <p class="product-price">฿2490</p>
+            <div class="button-group">
+              <button class="add-to-cart">Add to Cart</button>
+              <button class="buy-now">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card">
+          <img
+            src="../images/iwatch.jpg"
+            alt="iWatch"
+            width="350"
+            height="350"
+          />
+          <div class="product-info">
+            <h3>iWatch</h3>
+            <p class="product-description">
+              Comfortable gaming chair with adjustable armrests and lumbar
+              support.
+            </p>
+            <p class="product-price">฿390</p>
+            <div class="button-group">
+              <button class="add-to-cart">Add to Cart</button>
+              <button class="buy-now">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card">
+          <img src="../images/bike.jpg" alt="Bike" width="350" height="350" />
+          <div class="product-info">
+            <h3>Mountain Bike</h3>
+            <p class="product-description">
+              Extended mouse pad with smooth surface and anti-slip base.
+            </p>
+            <p class="product-price">฿790</p>
+            <div class="button-group">
+              <button class="add-to-cart">Add to Cart</button>
+              <button class="buy-now">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>
+        This website was built by <span class="author">Phitakphon Wanwaen</span>
+      </p>
+      <p>as a personal project to sharpen my coding skills.</p>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // ตรวจสอบการโหลดภาพ
+        const images = document.querySelectorAll(".product-card img");
+
+        images.forEach((img) => {
+          img.onerror = function () {
+            console.error("Failed to load image:", img.src);
+            // แสดงภาพสำรองเมื่อโหลดไม่สำเร็จ
+            img.src = "https://via.placeholder.com/350";
+          };
+
+          img.onload = function () {
+            console.log("Image loaded successfully:", img.src);
+          };
+        });
+
+        // เร์ฟ dropdown
+        const menuIcon = document.querySelector(".menu-icon");
+        const dropdownMenu = document.querySelector(".dropdown-menu");
+
+        if (menuIcon && dropdownMenu) {
+          menuIcon.addEventListener("click", function () {
+            dropdownMenu.classList.toggle("active");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

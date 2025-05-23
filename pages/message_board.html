@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Board</title>
+    <link rel="stylesheet" href="../css/post.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="menu-container">
+            <i class="fas fa-bars menu-icon"></i>
+            <div class="dropdown-menu">
+                <a href="message_board.html">Message Board</a>
+                <a href="shop.html">Shop</a>
+                <a href="resume.html">Profile</a>
+            </div>
+        </div>
+        <h1>Message Board</h1>
+        <div class="user-info">
+            <span id="username" onclick="window.location.href='resume.html'">Username</span>
+            <a href="login.html" class="auth-button">
+                <i class="fas fa-sign-out-alt"></i>
+                Logout
+            </a>
+        </div>
+    </header>
+
+    <div class="main-content-container">
+        <div class="post-form">
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="postTopic" 
+                    class="post-input" 
+                    placeholder="Topic"
+                    maxlength="35"
+                >
+                <span class="char-counter">0/35</span>
+            </div>
+            <div class="input-group">
+                <textarea 
+                    id="postContent" 
+                    class="post-input" 
+                    placeholder="What's on your mind?"
+                    rows="4"
+                ></textarea>
+            </div>
+            <button onclick="handlePost()" class="post-button">Post</button>
+        </div>
+        <div id="posts">
+            <!-- Posts will be added here -->
+        </div>
+    </div>
+    <footer class="footer">
+        <p>This website was built by <span class="author">Phitakphon Wanwaen</span></p>
+        <p>as a personal project to sharpen my coding skills.</p>
+    </footer>
+    <script src="../src/scripts/main.js"></script>
+</body>
+

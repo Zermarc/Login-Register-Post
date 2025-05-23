@@ -1,3 +1,19 @@
+function createPostHTML(topic, content, timestamp) {
+    return `
+        <div class="post-container">
+            <div class="post-header">
+                <span class="post-timestamp">
+                    <i class="far fa-clock"></i>${timestamp}
+                </span>
+                <i class="fas fa-trash delete-post"></i>
+            </div>
+            <h3 class="post-title">${topic}</h3>
+            <hr class="post-divider">
+            <p class="post-content">${content}</p>
+        </div>
+    `;
+}
+
 function handlePost() {
     const topic = document.getElementById('postTopic').value;
     const content = document.getElementById('postContent').value;
@@ -16,41 +32,7 @@ function handlePost() {
             hour12: false
         });
 
-        postElement.innerHTML = `
-            <div style="background: white; margin: 1rem 0; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: relative;">
-                <div style="position: absolute; top: 1rem; right: 1rem; display: flex; align-items: center; gap: 1rem;">
-                    <span style="color: #666; font-size: 0.9rem;">
-                        <i class="far fa-clock" style="margin-right: 0.5rem;"></i>${timestamp}
-                    </span>
-                    <i class="fas fa-trash delete-post" style="
-                        cursor: pointer;
-                        color: #888;
-                        transition: color 0.3s ease;
-                        font-size: 1.1rem;
-                    "></i>
-                </div>
-                <h3 style="
-                    margin-right: 200px; 
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    margin-bottom: 1rem;
-                    color: #333;
-                    font-size: 1.4rem;
-                ">${topic}</h3>
-                <hr style="
-                    border: none;
-                    height: 1px;
-                    background: linear-gradient(to right, #e0e0e0, #f5f5f5);
-                    margin: 1rem 0;
-                ">
-                <p style="
-                    white-space: pre-wrap;
-                    color: #555;
-                    line-height: 1.6;
-                ">${content}</p>
-            </div>
-        `;
+        postElement.innerHTML = createPostHTML(topic, content, timestamp);
         
         // Add click event listener for delete button
         const deleteBtn = postElement.querySelector('.delete-post');
@@ -66,6 +48,7 @@ function handlePost() {
 
         postsDiv.prepend(postElement);  
         
+        // Clear inputs
         document.getElementById('postTopic').value = '';
         document.getElementById('postContent').value = '';
         document.querySelector('.char-counter').textContent = '0/35';

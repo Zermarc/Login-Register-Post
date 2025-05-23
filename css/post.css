@@ -1,19 +1,20 @@
-.post-item {
+@import 'base.css';
+@import 'main.css';
+@import 'header.css';
+
+.post-container {
     background: white;
     margin: 1rem 0;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
 }
 
 .post-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.5rem;
-}
-
-.post-meta {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -36,24 +37,26 @@
 }
 
 .post-title {
+    margin-right: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 1rem;
     color: #333;
     font-size: 1.4rem;
-    font-weight: bold;
-    margin: 0;
 }
 
 .post-divider {
     border: none;
     height: 1px;
     background: linear-gradient(to right, #e0e0e0, #f5f5f5);
-    margin: 0.5rem 0;
+    margin: 1rem 0;
 }
 
 .post-content {
     white-space: pre-wrap;
     color: #555;
     line-height: 1.6;
-    margin: 0;
 }
 
 textarea.post-input {

@@ -13,7 +13,7 @@
             <h2>Register</h2>
             <form id="registerForm" onsubmit="handleRegister(event)">
                 <div class="form-group">
-                    <i class="fas fa-user input-icon"></i>
+                    <i class="fas fa-user input-icon" onclick="handleInputIcon(this)"></i>
                     <input 
                         type="text" 
                         name="username" 
@@ -24,7 +24,7 @@
                     <div class="error-message" id="username-error"></div>
                 </div>
                 <div class="form-group">
-                    <i class="fas fa-envelope input-icon"></i>
+                    <i class="fas fa-envelope input-icon" onclick="handleInputIcon(this)"></i>
                     <input 
                         type="email" 
                         name="email" 
@@ -35,7 +35,7 @@
                     <div class="error-message" id="email-error"></div>
                 </div>
                 <div class="form-group password-field">
-                    <i class="fas fa-lock input-icon"></i>
+                    <i class="fas fa-lock input-icon" onclick="handleInputIcon(this)"></i>
                     <input 
                         type="password" 
                         name="password" 
@@ -74,6 +74,7 @@
     <script src="../src/scripts/auth.js"></script>
 </body>
 </html>
+
 
 
 
