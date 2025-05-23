@@ -1,90 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
-    <link rel="stylesheet" href="../css/register.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../css/register.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <div class="auth-container">
-        <div class="auth-box">
-            <h2>Register</h2>
-            <form id="registerForm" onsubmit="handleRegister(event)">
-                <div class="form-group">
-                    <i class="fas fa-user input-icon" onclick="handleInputIcon(this)"></i>
-                    <input 
-                        type="text" 
-                        name="username" 
-                        placeholder="Username"
-                        required
-                    >
-                    <i class="fas fa-check validation-icon"></i>
-                    <div class="error-message" id="username-error"></div>
-                </div>
-                <div class="form-group">
-                    <i class="fas fa-envelope input-icon" onclick="handleInputIcon(this)"></i>
-                    <input 
-                        type="email" 
-                        name="email" 
-                        placeholder="Email"
-                        required
-                    >
-                    <i class="fas fa-check validation-icon"></i>
-                    <div class="error-message" id="email-error"></div>
-                </div>
-                <div class="form-group password-field">
-                    <i class="fas fa-lock input-icon" onclick="handleInputIcon(this)"></i>
-                    <input 
-                        type="password" 
-                        name="password" 
-                        placeholder="Password"
-                        required
-                    >
-                    <i class="fas fa-check validation-icon"></i>
-                    <div class="error-message" id="password-error"></div>
-                </div>
-                <div class="form-group password-field confirm-password">
-                    <i class="fas fa-lock input-icon"></i>
-                    <input 
-                        type="password" 
-                        name="confirmPassword" 
-                        placeholder="Confirm Password"
-                        required
-                    >
-                    <i class="fas fa-eye password-toggle" onclick="toggleBothPasswords(this)"></i>
-                    <div class="error-message" id="confirm-password-error"></div>
-                </div>
-                <div class="password-requirements">
-                    <ul>
-                        <li id="length-check">At least 8 characters</li>
-                        <li id="letter-check">Includes letters</li>
-                        <li id="number-check">Includes numbers</li>
-                        <li id="special-check">Includes special characters (@$!%*#?&)</li>
-                    </ul>
-                </div>
-                <button type="submit" class="auth-button">Register</button>
-            </form>
-            <p class="auth-link">
-                Already have an account? <a href="login.html">Login</a>
-            </p>
-        </div>
+      <div class="auth-box">
+        <h2>Register</h2>
+        <form id="registerForm" onsubmit="handleRegister(event)">
+          <div class="form-group">
+            <i
+              class="fas fa-user input-icon"
+              onclick="handleInputIcon(this)"
+            ></i>
+            <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              required
+            />
+            <i class="fas fa-check validation-icon"></i>
+            <div class="error-message" id="username-error"></div>
+          </div>
+          <div class="form-group">
+            <i
+              class="fas fa-envelope input-icon"
+              onclick="handleInputIcon(this)"
+            ></i>
+            <input type="email" name="email" placeholder="Email" required />
+            <i class="fas fa-check validation-icon"></i>
+            <div class="error-message" id="email-error"></div>
+          </div>
+          <div class="form-group password-field">
+            <i
+              class="fas fa-lock input-icon"
+              onclick="handleInputIcon(this)"
+            ></i>
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+            <i class="fas fa-check validation-icon"></i>
+            <div class="error-message" id="password-error"></div>
+          </div>
+          <div class="form-group password-field confirm-password">
+            <i class="fas fa-lock input-icon"></i>
+            <input
+              type="password"
+              name="confirmPassword"
+              placeholder="Confirm Password"
+              required
+            />
+            <i
+              class="fas fa-eye password-toggle"
+              onclick="toggleBothPasswords(this)"
+            ></i>
+            <div class="error-message" id="confirm-password-error"></div>
+          </div>
+          <div class="password-requirements">
+            <ul>
+              <li id="length-check">At least 8 characters</li>
+              <li id="letter-check">Includes letters</li>
+              <li id="number-check">Includes numbers</li>
+              <li id="special-check">Includes special characters (@$!%*#?&)</li>
+            </ul>
+          </div>
+          <button type="submit" class="auth-button">Register</button>
+        </form>
+        <p class="auth-link">
+          Already have an account? <a href="index.html">Login</a>
+        </p>
+      </div>
     </div>
     <script src="../src/scripts/auth.js"></script>
-</body>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
